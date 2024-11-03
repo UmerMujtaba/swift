@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "SwiftPay",
+    "slug": "SwiftPay",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            {
+              "BasisGrotesque-Black": "./assets/fonts/BasisGrotesque-Black.ttf",
+              "BasisGrotesque-Bold": "./assets/fonts/BasisGrotesque-Bold.ttf",
+              "BasisGrotesque-Regular": "./assets/fonts/BasisGrotesque-Regular.ttf",
+              "BasisGrotesque-Medium": "./assets/fonts/BasisGrotesque-Medium.ttf",
+              "BasisGrotesque-Light": "./assets/fonts/BasisGrotesque-Light.ttf",
+              "PlusJakartaSans-Bold": "./assets/fonts/PlusJakartaSans-Bold.ttf",
+              "PlusJakartaSans-Regular": "./assets/fonts/PlusJakartaSans-Regular.ttf",
+              "PlusJakartaSans-Medium": "./assets/fonts/PlusJakartaSans-Medium.ttf",
+              "PlusJakartaSans-SemiBold": "./assets/fonts/PlusJakartaSans-SemiBold.ttf",
+              "PlusJakartaSans-ExtraBold": "./assets/fonts/PlusJakartaSans-ExtraBold.ttf",
+              "PlusJakartaSans-ExtraLight": "./assets/fonts/PlusJakartaSans-ExtraLight.ttf"
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}

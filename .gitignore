@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+
+# macOS files
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Environment files
+.env

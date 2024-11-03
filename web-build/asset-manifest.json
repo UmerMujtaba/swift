@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.js": "/static/js/main.0ecc30cd.js",
+    "static/js/957.3cd22509.js": "/static/js/957.3cd22509.js",
+    "static/media/ballonbgimage.png": "/static/media/ballonbgimage.99cf9b843b010485f0df.png",
+    "static/media/backgroundimage.png": "/static/media/backgroundimage.2cdce93ec607e53c7e86.png",
+    "static/media/phoneimage.png": "/static/media/phoneimage.935e5e71c2dcbaf2696e.png",
+    "static/media/BasisGrotesque-Regular.ttf": "/static/media/BasisGrotesque-Regular.668dad8a3d4075989eae.ttf",
+    "static/media/BasisGrotesque-Light.ttf": "/static/media/BasisGrotesque-Light.faf4233b1e3042eaba8a.ttf",
+    "static/media/BasisGrotesque-Medium.ttf": "/static/media/BasisGrotesque-Medium.0cf3fed62f93c2ec5f76.ttf",
+    "static/media/BasisGrotesque-Bold.ttf": "/static/media/BasisGrotesque-Bold.6a8558f0425780c56efa.ttf",
+    "static/media/BasisGrotesque-Black.ttf": "/static/media/BasisGrotesque-Black.04b96c723564a9fa25a5.ttf",
+    "static/media/PlusJakartaSans-SemiBold.ttf": "/static/media/PlusJakartaSans-SemiBold.cf92107f36f071f6384c.ttf",
+    "static/media/PlusJakartaSans-Medium.ttf": "/static/media/PlusJakartaSans-Medium.f78ffc04acb877ce387e.ttf",
+    "static/media/PlusJakartaSans-ExtraBold.ttf": "/static/media/PlusJakartaSans-ExtraBold.c3c2ec0cc06a27366227.ttf",
+    "static/media/PlusJakartaSans-Bold.ttf": "/static/media/PlusJakartaSans-Bold.542d4930de15d99be736.ttf",
+    "static/media/PlusJakartaSans-ExtraLight.ttf": "/static/media/PlusJakartaSans-ExtraLight.45b106123a076a3d9da1.ttf",
+    "static/media/PlusJakartaSans-Regular.ttf": "/static/media/PlusJakartaSans-Regular.8b8f90ab0e945b1e795a.ttf",
+    "static/media/copyicon.png": "/static/media/copyicon.f008582e08c01b84d48d.png",
+    "static/media/logotextimage2.png": "/static/media/logotextimage2.909afc329662bff8aaa3.png",
+    "static/media/balloonsimage.png": "/static/media/balloonsimage.3a45f2bb716df6c52713.png",
+    "static/media/eyeopenicon.png": "/static/media/eyeopenicon.0e7213cc836b6fee953b.png",
+    "static/media/eyehideicon.png": "/static/media/eyehideicon.fd3f7e3a6e47bea19ccc.png",
+    "favicon.ico": "/favicon.ico",
+    "static/media/logotextimage.png": "/static/media/logotextimage.c14356b30c44762d4d40.png",
+    "index.html": "/index.html",
+    "favicon-32.png": "/favicon-32.png",
+    "static/media/search.png": "/static/media/search.9c351fd793134cf8b3ba.png",
+    "favicon-16.png": "/favicon-16.png",
+    "serve.json": "/serve.json",
+    "manifest.json": "/manifest.json",
+    "main.0ecc30cd.js.map": "/static/js/main.0ecc30cd.js.map",
+    "957.3cd22509.js.map": "/static/js/957.3cd22509.js.map"
+  },
+  "entrypoints": [
+    "static/js/957.3cd22509.js",
+    "static/js/main.0ecc30cd.js"
+  ]
+}
