@@ -7,7 +7,8 @@ export const styles = StyleSheet.create({
     flex: 1,
     ...Platform.select({
       web: {
-        paddingHorizontal: wp(30),
+        width: wp(30),
+        alignSelf:'center'
       },
     }),
   },

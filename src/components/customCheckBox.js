@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 import React, { useState } from 'react';
-import { rfs, rhp, rwp } from '../constants/dimensions';
+import { rfs, rhp, rwp, wp } from '../constants/dimensions';
 import { Strings } from '../constants/strings';
 import { colors } from '../constants/colors';
 
@@ -21,7 +21,7 @@ const CustomCheckbox = ({ onPress, style }) => {
           {isChecked && <Text style={styles.tick}>✓</Text>}
         </View>
       </TouchableOpacity>
-      <TouchableOpacity onPress={toggleCheckbox} activeOpacity={0.4} style={styles.text}>
+      <TouchableOpacity onPress={toggleCheckbox} activeOpacity={0.4} style={styles.textContainer}>
         <Text style={styles.label}>
           {Strings.termsTextStart}
           <Text style={[styles.label, styles.termsText]}>
@@ -80,15 +80,20 @@ const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         marginRight: rwp(0),
+        backgroundColor: 'pink',
       },
     }),
   },
-
+  textContainer: {
+    flex: 1,
+  },
   termsText: {
     color: colors.primary,
     fontFamily: 'BasisGrotesque-Medium',
     ...Platform.select({
       web: {
+        textAlign: 'justify',
+        backgroundColor: 'red',
       },
     }),
   },

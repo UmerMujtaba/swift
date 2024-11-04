@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
     padding: 20,
     ...Platform.select({
       web: {
-        paddingHorizontal: wp(30),
+        width: wp(30),
+        alignSelf:'center',
       },
     }),
   },
