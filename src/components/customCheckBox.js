@@ -80,7 +80,6 @@ const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         marginRight: rwp(0),
-        backgroundColor: 'pink',
       },
     }),
   },
@@ -93,7 +92,6 @@ const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         textAlign: 'justify',
-        backgroundColor: 'red',
       },
     }),
   },
