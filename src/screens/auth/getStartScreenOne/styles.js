@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         width: wp(30),
-        alignSelf:'center'
+        alignSelf:'center',
       },
     }),
   },
@@ -30,9 +30,8 @@ export const styles = StyleSheet.create({
     backgroundColor: isButtonEnabled ? colors.primary : colors.secondary,
     ...Platform.select({
       web: {
-        width: wp(20),
-        alignSelf: 'center',
-        justifyContent: 'center',
+        width: wp(28),
+        justifyContent:'center',
       },
     }),
   }),

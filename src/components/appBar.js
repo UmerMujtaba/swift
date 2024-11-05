@@ -17,11 +17,11 @@ const AppBar = ({ start, end, onPress }) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: rhp(54),
     flexDirection: 'row',
+    marginBottom: rhp(10),
     alignItems: 'center',
     paddingHorizontal: rwp(5),
-    marginTop: Platform.OS === 'ios' ? rhp(15) : rhp(0),
+    marginTop: Platform.OS === 'ios' ? rhp(15) : rhp(15),
     ...Platform.select({
       web: {
         justifyContent: 'flex-start',
@@ -31,13 +31,12 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     alignSelf: 'flex-start',
-    marginRight: rwp(5),
   },
   img: {
     resizeMode: 'contain',
-    height: rhp(24),
-    width: rwp(24),
-    marginTop: rhp(15),
+    height: Platform.OS === 'web' ? wp(1.5) : rhp(24),
+    width: Platform.OS === 'web' ? wp(1.5) : rhp(24),
+    marginTop: Platform.OS === 'web' ? rhp(0) : rhp(0),
   },
   stepsText: {
     color: colors.grey,

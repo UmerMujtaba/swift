@@ -5,6 +5,7 @@ import {
   View,
   Image,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
 import {rfs, rhp} from '../constants/dimensions';
 import {colors} from '../constants/colors';
@@ -31,6 +32,7 @@ const CustomTextInput = forwardRef(
       onSubmitEditing,
       eyePress,
       maxLength,
+      selectionColor
     },
     ref,
   ) => {
@@ -51,7 +53,7 @@ const CustomTextInput = forwardRef(
           value={value}
           keyboardType={keyboardType}
           secureTextEntry={secureTextEntry}
-          style={styles.inputStyle}
+          style={[styles.inputStyle]}
           showSoftInputOnFocus={showSoftInputOnFocus}
           autoFocus={autoFocus}
           returnKeyType={returnKeyType}
@@ -59,6 +61,7 @@ const CustomTextInput = forwardRef(
           blurOnSubmit={blurOnSubmit}
           autoCorrect={autoCorrect}
           maxLength={maxLength}
+          selectionColor={selectionColor}
         />
         {eye && (
           <TouchableOpacity onPress={eyePress}>
@@ -85,11 +88,16 @@ const styles = StyleSheet.create({
     fontSize: rfs(14),
     color: 'black',
     height: rhp(48),
+    ...Platform.select({
+      web:{
+        outlineStyle:'none'
+      }
+    })
   },
   icon: {
     opacity: 0.8,
   },
-  inputStyle: {flex: 1, color: 'black', fontSize: rfs(16), lineHeight: 20},
+  inputStyle: {flex: 1, color: 'black', fontSize: rfs(16), lineHeight: 20, },
 });
 
 export default CustomTextInput;

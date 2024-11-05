@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         width: wp(30),
-        alignSelf:'center'
+        alignSelf: 'center'
       },
     }),
   },
@@ -70,7 +70,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
     ...Platform.select({
       web: {
-        paddingHorizontal: wp(30),
+        flexDirection: 'row',
+        width: 'auto',
+        justifyContent: 'space-around',
+        alignSelf:'center'
       },
     }),
   },
@@ -84,14 +87,16 @@ export const styles = StyleSheet.create({
   btn: {
     ...Platform.select({
       web: {
-        width: rwp(35)
+        width: 119,
+        marginRight:12,
+        marginLeft:15
       },
     }),
   },
   btn2: {
     ...Platform.select({
       web: {
-        width: rwp(60)
+        width: 214,
       },
     }),
   }

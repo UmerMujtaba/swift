@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Platform } from 'react-native';
+import { View, Text, TouchableOpacity, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import React, { useState } from 'react';
 import AppBar from '../../../components/appBar';
 import { styles } from './styles';
@@ -25,9 +25,14 @@ const GetStartedScreenThree = ({ route, navigation }) => {
   });
   const ref = useBlurOnFulfill({ value, cellCount: CELL_COUNT });
   const isOtpComplete = value.length === CELL_COUNT;
+  const DedicatedView = Platform.OS === 'web' ? View : TouchableWithoutFeedback
+  const handlePress = () => {
+    Platform.OS !== 'web' && Keyboard.dismiss()
+  }
   return (
+    <DedicatedView style={{flex:1}} onPress={handlePress}>
     <View style={styles.container}>
-      <AppBar start={2} end={5} onPress={() => navigation.goBack()} />
+      <AppBar start={3} end={3} onPress={() => navigation.goBack()} />
       <ProgressBar
         progress={100}
         style={{ borderBottomLeftRadius: 8, borderBottomTopRadius: 8 }}
@@ -36,7 +41,7 @@ const GetStartedScreenThree = ({ route, navigation }) => {
       <Text style={styles.subTitle}>{Strings.otpHeading} </Text>
 
       <View style={styles.countryCodeStyle}>
-        <Text style={styles.phnText}>{`+${countryCode} ${phone}`}</Text>
+        <Text style={styles.phnText}>{`${countryCode} ${phone}`}</Text>
         <TouchableOpacity>
           <Text style={styles.editText}>{Strings.editNumber}</Text>
         </TouchableOpacity>
@@ -80,9 +85,9 @@ const GetStartedScreenThree = ({ route, navigation }) => {
               styles.codeText,
               {
                 color: colors.primary,
-                marginLeft: rwp(4),
+                marginLeft: rwp(2),
                 fontFamily: 'PlusJakartaSans-SemiBold',
-                fontSize: Platform.OS ==='ios' ? rfs(14) : rfs(16)
+                fontSize: Platform.OS ==='ios' ? rfs(14) : rfs(15)
               },
             ]}>
             {Strings.resendCode}
@@ -95,6 +100,7 @@ const GetStartedScreenThree = ({ route, navigation }) => {
         style={styles.btnStyle(isOtpComplete)}
       />
     </View>
+    </DedicatedView>
   );
 };
 

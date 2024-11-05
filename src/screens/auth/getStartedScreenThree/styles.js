@@ -24,14 +24,14 @@ export const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   subTitle: {
-    fontSize: Platform.OS === 'ios' ? rfs(15) : rfs(18),
+    fontSize: Platform.OS === 'ios' ? rfs(15) : rfs(16),
     fontWeight: '500',
     fontFamily: 'BasisGrotesque-Regular',
     color: colors.grey,
     marginTop: rhp(10),
   },
   phnText: {
-    fontSize: Platform.OS === 'ios' ? rfs(15) : rfs(18),
+    fontSize: Platform.OS === 'ios' ? rfs(15) : rfs(16),
     fontWeight: '400',
     marginTop: 4,
     fontFamily: 'BasisGrotesque-Regular',
@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
   },
   editText: {
     color: colors.primary,
-    fontSize: Platform.OS === 'ios' ? rfs(15) : rfs(18),
+    fontSize: Platform.OS === 'ios' ? rfs(15) : rfs(16),
     fontWeight: '500',
     marginTop: 4,
     fontFamily: 'BasisGrotesque-Medium',
@@ -80,7 +80,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   codeText: {
-    fontSize: Platform.OS === 'ios' ? rfs(14) : rfs(16),
+    fontSize: Platform.OS === 'ios' ? rfs(14) : rfs(15),
     fontWeight: '600',
     color: colors.grey,
     fontFamily: 'PlusJakartaSans-Medium',
@@ -93,9 +93,8 @@ export const styles = StyleSheet.create({
     backgroundColor: isOtpComplete ? colors.primary : colors.secondary,
     ...Platform.select({
       web: {
-        width: wp(20),
-        alignSelf: ' center',
-        justifyContent: 'center',
+        width: wp(28),
+        justifyContent:'center',
       },
     }),
   }),

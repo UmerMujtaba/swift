@@ -24,7 +24,7 @@ const OnBoardingScreen = () => {
         <View style={styles.bottomContainer}>
           <Text style={[styles.heading]}>{Strings.mobileBanking}</Text>
           <Text style={styles.subHeading}>{Strings.getSendingText}</Text>
-          <View style={[styles.btnContainer, styles.btnContainer]}>
+          <View style={[styles.btnContainer]}>
             <PlainButton buttonText={Strings.login}
               style={styles.btn}
             />

@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         width: rwp(5),
+        borderWidth:1,
         height: rhp(20),
         marginRight: rwp(5),
       },

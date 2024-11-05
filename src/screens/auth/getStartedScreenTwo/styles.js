@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         width: wp(30),
-        alignSelf:'center',
+        alignSelf: 'center',
       },
     }),
   },
@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
   countryCodePhnRow: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginTop: rhp(26),
+    marginTop: rhp(24),
   },
   countryHeading: {
     color: colors.grey,
@@ -41,57 +41,57 @@ export const styles = StyleSheet.create({
     fontWeight: '400',
   },
   countryContainer: {
+    height: rhp(30),
     paddingVertical: 5,
     borderBottomColor: colors.disabled,
     borderRadius: 0,
     borderWidth: 0,
     borderBottomWidth: 1,
-    maxWidth: 100
+    maxWidth: 100,
+    ...Platform.select({
+      web: {
+        maxWidth: 200,
+      }
+    }),
   },
   countryInsideRow: {
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'space-around',
     flexDirection: 'row',
+    ...Platform.select({
+      web: {
+        justifyContent: 'space-around',
+      }
+    }),
+
   },
   countryText: {
     fontSize: rfs(15),
 
   },
   dropDownContainer: {
-    width: 180,
+    width: rwp(180),
 
   },
   searchBar: {
-    width: 150,
+    width: rwp(150),
     borderWidth: 0,
     borderBottomWidth: 1,
     borderBottomColor: colors.disabled,
 
   },
   phoneInputField: {
-    borderBottomColor: colors.disabled,
-    borderRadius: 0,
+    padding: 0,
+    height: rhp(30),
     borderWidth: 0,
     borderBottomWidth: 1,
-    marginTop: 1.5,
-    opacity: 0.5,
-    fontSize: 15
-  },
+    ...Platform.select({
+      web: {
+        width: wp(22),
+        outlineStyle: 'none'
+      },
 
-  inputStyle: {
-    marginLeft: rwp(12),
-    width: rwp(261),
-    borderRadius: 4,
-    borderBottomWidth: 1,
-    textAlignVertical: 'bottom',
-  },
-  countryCode: {
-    fontSize: rfs(16),
-    color: '#373F46',
-    marginLeft: 5,
-    marginTop: 3,
-    fontWeight: '400',
-    fontFamily: 'BasisGrotesque-Regular',
+    })
   },
   agreementText: {
     fontSize: Platform.OS === 'ios' ? rfs(14) : rfs(16),
@@ -105,7 +105,7 @@ export const styles = StyleSheet.create({
     flex: 1
   },
   containerBtnStyle: {
-    width: 50
+    width: rwp(50)
   },
   btnStyle: isPhoneNumberFilled => ({
     width: wp(90),
@@ -113,8 +113,7 @@ export const styles = StyleSheet.create({
     backgroundColor: isPhoneNumberFilled ? colors.primary : colors.secondary,
     ...Platform.select({
       web: {
-        width: wp(20),
-        alignSelf: ' center',
+        width: wp(28),
         justifyContent: 'center',
       },
     }),

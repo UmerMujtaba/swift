@@ -1,4 +1,4 @@
-import { View, Text, StatusBar } from 'react-native';
+import { View, Text, StatusBar, TouchableWithoutFeedback, Keyboard, Platform, TextInput } from 'react-native';
 import React, { useRef, useState } from 'react';
 import { styles } from './styles';
 import AppBar from '../../../components/appBar';
@@ -35,15 +35,26 @@ const GetStartedScreenOne = ({ navigation }) => {
   };
 
   const progress = (currentStep / totalSteps) * 100;
-
+  const DedicatedView = Platform.OS === 'web' ? View : TouchableWithoutFeedback
+  const handlePress = () => {
+    Platform.OS !== 'web' && Keyboard.dismiss()
+  }
   return (
+    <DedicatedView style={{flex:1}} onPress={handlePress}>
     <View style={[styles.container]}>
       <StatusBar translucent={true} backgroundColor={'transparent'} />
-      <AppBar start={1} end={5} onPress={() => navigation.goBack()} />
+      <AppBar start={1} end={3} onPress={() => navigation.goBack()} />
 
       <ProgressBar progress={33.3} />
 
       <Text style={styles.title}>{Strings.getStartedWithAccount} </Text>
+
+      {/* <TextInput
+      
+      
+     style={{height:30}}
+     
+      /> */}
       <CustomTextInput
         ref={firstRef}
         placeholder={Strings.enterEmail}
@@ -52,6 +63,7 @@ const GetStartedScreenOne = ({ navigation }) => {
         value={Email}
         onChangeText={setEmail}
         onSubmitEditing={() => secondRef.current.focus()}
+        //selectionColor='red'
       />
       <CustomTextInput
         ref={secondRef}
@@ -87,6 +99,7 @@ const GetStartedScreenOne = ({ navigation }) => {
         />
       </View>
     </View>
+    </DedicatedView>
   );
 };
 
