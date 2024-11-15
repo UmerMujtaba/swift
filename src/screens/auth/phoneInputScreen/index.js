@@ -8,7 +8,8 @@ import { GradientButton } from '../../../components/cta';
 import { navigate } from '../../../navigator/navigationRef';
 import ProgressBar from '../../../components/progressBar';
 
-const GetStartedScreenTwo = ({ navigation }) => {
+
+const PhoneInputScreen = ({ navigation }) => {
   const [selected, setSelected] = useState('+234');
   const [country, setCountry] = useState({ callingCode: '+234' });
   const [phone, setPhone] = useState('');
@@ -22,7 +23,7 @@ const GetStartedScreenTwo = ({ navigation }) => {
     <DedicatedView style={{flex:1}} onPress={handlePress}>
       <View style={styles.container}>
         <AppBar start={2} end={3} onPress={() => navigation.goBack()} />
-        <ProgressBar progress={60.6} />
+        <ProgressBar progress={66.6}/>
         <Text style={styles.title}>{Strings.yourMobileNum} </Text>
         <Text style={styles.subTitle}>{Strings.useAsAccNum} </Text>
         <View style={styles.countryCodePhnRow}>
@@ -61,7 +62,7 @@ const GetStartedScreenTwo = ({ navigation }) => {
           style={styles.btnStyle(isPhoneNumberFilled)}
           onPress={() => {
             if (isPhoneNumberFilled) {
-              navigate(ScreenNames.StartScreenThree, {
+              navigate(ScreenNames.OtpValidScreen, {
                 phone,
                 countryCode: country.callingCode || selected,
               });
@@ -73,4 +74,4 @@ const GetStartedScreenTwo = ({ navigation }) => {
   );
 };
 
-export default GetStartedScreenTwo;
+export default PhoneInputScreen;

@@ -26,20 +26,7 @@ export async function navigateReset(name, params) {
     }),
   );
 }
-export async function navigateResetStoreClear(name, reduxDispatch) {
-  navigationRef.current?.dispatch(
-    CommonActions.reset({
-      index: 0,
-      routes: [
-        {
-          name: name,
-        },
-      ],
-    }),
-  );
-  reduxDispatch(reset());
-  reduxDispatch(clear());
-}
+
 export async function navigateBack(name, params) {
   navigationRef.current?.dispatch(
     CommonActions.goBack(),
@@ -60,15 +47,3 @@ export async function popScreen() {
   navigationRef.current?.dispatch(popAction);
 }
 
-export async function openDrawer() {
-  console.log("Yess");
-  try {
-    DrawerActions.openDrawer();
-    // navigationRef.current.dispatch();
-  } catch(error) {
-    console.log(":rocket: ~ file: navigationRef.js:41 ~ openDrawer ~ error:", error);
-  }
-}
-export async function closeDrawer() {
-  navigationRef.current.dispatch(DrawerActions.closeDrawer());
-}

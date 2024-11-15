@@ -1,11 +1,10 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-import {ScreenNames} from '../../constants/strings';
+import { ScreenNames } from '../../constants/strings';
 import OnBoardingScreen from '../../screens/auth/onBoardingScreen';
-import GetStartedScreenOne from '../../screens/auth/getStartScreenOne';
-import GetStartedScreenTwo from '../../screens/auth/getStartedScreenTwo';
-import GetStartedScreenThree from '../../screens/auth/getStartedScreenThree';
+import OTPScreen from '../../screens/auth/otpScreen';
+import PhoneInputScreen from '../../screens/auth/phoneInputScreen';
+import SignUpScreen from '../../screens/auth/signUpScreen';
 
 const AuthStack = createNativeStackNavigator();
 
@@ -25,18 +24,18 @@ const Auth = () => {
         options={navigationOptions}
       />
       <AuthStack.Screen
-        name={ScreenNames.StartScreenOne}
-        component={GetStartedScreenOne}
+        name={ScreenNames.RegistrationScreen}
+        component={SignUpScreen}
         options={navigationOptions}
       />
       <AuthStack.Screen
-        name={ScreenNames.StartScreenTwo}
-        component={GetStartedScreenTwo}
+        name={ScreenNames.PhoneInpScreen}
+        component={PhoneInputScreen}
         options={navigationOptions}
       />
       <AuthStack.Screen
-        name={ScreenNames.StartScreenThree}
-        component={GetStartedScreenThree}
+        name={ScreenNames.OtpValidScreen}
+        component={OTPScreen}
         options={navigationOptions}
       />
     </AuthStack.Navigator>

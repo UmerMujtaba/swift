@@ -9,12 +9,12 @@ import {
   useBlurOnFulfill,
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
-import { rfs, rwp } from '../../../constants/dimensions';
+import { rfs,rwp } from '../../../constants/dimensions';
 import { GradientButton } from '../../../components/cta';
 import ProgressBar from '../../../components/progressBar';
 import { colors } from '../../../constants/colors';
 
-const GetStartedScreenThree = ({ route, navigation }) => {
+const OTPScreen = ({ route, navigation }) => {
   const { phone, countryCode } = route.params;
   const [otpCode, setOtpCode] = useState(null);
   const CELL_COUNT = 6;
@@ -104,4 +104,4 @@ const GetStartedScreenThree = ({ route, navigation }) => {
   );
 };
 
-export default GetStartedScreenThree;
+export default OTPScreen;

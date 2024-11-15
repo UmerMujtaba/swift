@@ -11,6 +11,7 @@ const AppBar = ({ start, end, onPress }) => {
         <Image source={images.leftArrow} style={styles.img} />
       </TouchableOpacity>
       <Text style={styles.stepsText}>{`Step ${start}/${end}`}</Text>
+
     </View>
   );
 };

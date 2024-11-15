@@ -1,9 +1,9 @@
-import React, {useEffect, useRef} from 'react';
-import {View, StyleSheet, Animated} from 'react-native';
-import {rhp} from '../constants/dimensions';
+import React, { useEffect, useRef } from 'react';
+import { View, StyleSheet, Animated } from 'react-native';
+import { rhp } from '../constants/dimensions';
 
-const ProgressBar = ({progress, style}) => {
-  const animatedWidth = useRef(new Animated.Value(0)).current;
+const ProgressBar = ({ progress, style }) => {
+  const animatedWidth = useRef(new Animated.Value(progress)).current;
 
   useEffect(() => {
     Animated.timing(animatedWidth, {
@@ -11,14 +11,14 @@ const ProgressBar = ({progress, style}) => {
       duration: 1000,
       useNativeDriver: false,
     }).start();
-  }, [progress, animatedWidth]);
+  }, [progress]);
 
   return (
     <View style={styles.barBackground}>
       <Animated.View
         style={[
           styles.barFront,
-          styles.barProgress(animatedWidth, progress),
+          styles.barProgress(animatedWidth),
           style,
         ]}
       />
@@ -39,13 +39,13 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 8,
     backgroundColor: '#4681AA',
   },
-  barProgress: (animatedWidth, progress) => ({
+  barProgress: (animatedWidth) => ({
     width: animatedWidth.interpolate({
       inputRange: [0, 100],
       outputRange: ['0%', '100%'],
     }),
-    borderTopRightRadius: progress === 100 ? 8 : 0,
-    borderBottomRightRadius: progress === 100 ? 8 : 0,
+    borderTopRightRadius: animatedWidth._value === 100 ? 8 : 0,
+    borderBottomRightRadius: animatedWidth._value === 100 ? 8 : 0,
   }),
 });
 

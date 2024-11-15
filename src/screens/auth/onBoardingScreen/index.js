@@ -30,7 +30,7 @@ const OnBoardingScreen = () => {
             />
             <GradientButton
               buttonText={Strings.getStarted}
-              onPress={() => navigate(ScreenNames.StartScreenOne)}
+              onPress={() => navigate(ScreenNames.RegistrationScreen)}
               style={styles.btn2}
             />
           </View>

@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, { forwardRef } from 'react';
 import {
   TextInput,
   StyleSheet,
@@ -7,8 +7,8 @@ import {
   TouchableOpacity,
   Platform,
 } from 'react-native';
-import {rfs, rhp} from '../constants/dimensions';
-import {colors} from '../constants/colors';
+import { rfs, rhp, wp } from '../constants/dimensions';
+import { colors } from '../constants/colors';
 
 const CustomTextInput = forwardRef(
   (
@@ -40,7 +40,7 @@ const CustomTextInput = forwardRef(
       <View style={[styles.container, style]}>
         {rightIcon && (
           <Image
-            style={[{...suffixIconStyle}]}
+            style={[{ ...suffixIconStyle }]}
             resizeMode="contain"
             source={imageSource}
           />
@@ -89,15 +89,24 @@ const styles = StyleSheet.create({
     color: 'black',
     height: rhp(48),
     ...Platform.select({
-      web:{
-        outlineStyle:'none'
+      web: {
+        outlineStyle: 'none'
       }
     })
   },
   icon: {
     opacity: 0.8,
   },
-  inputStyle: {flex: 1, color: 'black', fontSize: rfs(16), lineHeight: 20, },
+  inputStyle: {
+    color: 'black', fontSize: rfs(16), lineHeight: 20, flex: 1,
+
+    ...Platform.select({
+      web: {
+        outlineStyle: 'none'
+      }
+    })
+
+  },
 });
 
 export default CustomTextInput;

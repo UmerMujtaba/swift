@@ -88,7 +88,8 @@ export const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         width: wp(22),
-        outlineStyle: 'none'
+        outlineStyle: 'none',
+        borderRadius:0
       },
 
     })

@@ -18,7 +18,7 @@ export const Strings = {
   otpHeading: 'Enter the 6-digit code we texted to you at ',
   editNumber: 'Edit Number',
   codeReceive: "Didn't receive the code?",
-  resendCode: 'Resend code',
+  resendCode: ' Resend code',
   openingText: 'Your Swift Pay account is\nopen, Victor!',
   announcementNews:
     'Great news, you’ve joined Swift Pay. You can\nnow make transfers and more.',
@@ -40,9 +40,9 @@ export const Strings = {
 export const ScreenNames = {
   AuthStack: 'AuthStack',
   BoardingScreen: 'OnBoardScreen',
-  StartScreenOne: 'GetStartedScreenOne',
-  StartScreenTwo: 'GetStartedScreenTwo',
-  StartScreenThree: 'GetStartedScreenThree',
+  RegistrationScreen: 'RegistrationScreen',
+  PhoneInpScreen: 'PhoneInputScreen',
+  OtpValidScreen: 'OtpValidScreen',
   StartScreenFour: 'GetStartedScreenFour',
   DashBoardScreen: 'DashBoardScreen',
 };

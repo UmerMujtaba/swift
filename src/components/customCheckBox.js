@@ -85,7 +85,13 @@ const styles = StyleSheet.create({
     }),
   },
   textContainer: {
-    flex: 1,
+    //flex: 1,
+    ...Platform.select({
+      web: {
+        flex: 1,
+      },
+    }),
+
   },
   termsText: {
     color: colors.primary,
